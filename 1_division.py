@@ -25,3 +25,18 @@
 # Operation finished.
 
 # write your code here:
+
+try:
+     number1 = int (input("Type in 2 numbers:"))
+     number2 = int (input("Type in 2 numbers:"))
+     number1/number2
+except ValueError:
+    print("You need to type a number")
+except ZeroDivisionError:
+    print("You cant devide by 0")
+except:2
+    print("Something went wrong")
+else: 
+    print("All is good!")
+finally:
+    print("This is the end!!!!")
