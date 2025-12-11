@@ -23,11 +23,16 @@
 # Attempt processed.
 # You typed in: 8
 
-prompt = "Please type in a number: "
-lower = 5
-upper = 10
-# write your code here:
-
-
-result = read_input(prompt, lower, upper)
-print(f"You typed in: {result}")
+def read_input(prompt, lower, upper):
+    while True:
+        try:
+            userinput = input(prompt)
+            number = int(user_input)
+            if number < lower or number > upper:
+                print(f"The number must be between {lower} and {upper}.")
+            else:
+                return number
+        except ValueError:
+            print("You must type a valid integer!")
+        finally:
+            print ("Attempt proccesed.")
